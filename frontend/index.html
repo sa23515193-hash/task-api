@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="TaskFlow Task Management System"
+  >
+
+  <title>
+    TaskFlow — Task Management
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+<div class="background background-one"></div>
+<div class="background background-two"></div>
+
+
+<header class="navbar">
+
+  <a
+    href="#"
+    class="logo"
+  >
+
+    <span class="logo-icon">
+      ✓
+    </span>
+
+    Task<span>Flow</span>
+
+  </a>
+
+
+  <nav>
+
+    <a href="#features">
+      Features
+    </a>
+
+    <a href="#dashboard">
+      Dashboard
+    </a>
+
+    <a href="#api">
+      API
+    </a>
+
+  </nav>
+
+
+  <button
+    class="login-button"
+    id="loginButton"
+  >
+    Login
+  </button>
+
+</header>
+
+
+
+<main>
+
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <span class="eyebrow">
+      REST API · JWT · MONGODB
+    </span>
+
+
+    <h1>
+
+      Manage every task.
+      <br>
+
+      <span>
+        Build better days.
+      </span>
+
+    </h1>
+
+
+    <p>
+
+      A modern task management dashboard
+      powered by a secure RESTful API,
+      JWT authentication and MongoDB.
+
+    </p>
+
+
+    <div class="hero-buttons">
+
+      <a
+        href="#dashboard"
+        class="primary-button"
+      >
+        Open Dashboard →
+      </a>
+
+
+      <a
+        href="#api"
+        class="secondary-button"
+      >
+        Explore API
+      </a>
+
+    </div>
+
+
+    <div class="technology-list">
+
+      <span>Node.js</span>
+      <span>Express</span>
+      <span>MongoDB</span>
+      <span>JWT</span>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="hero-dashboard">
+
+    <div class="window-bar">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <small>
+        task-api / dashboard
+      </small>
+
+    </div>
+
+
+    <div class="statistics">
+
+      <div>
+        <small>
+          Total Tasks
+        </small>
+
+        <strong id="heroTotal">
+          6
+        </strong>
+      </div>
+
+
+      <div>
+        <small>
+          Completed
+        </small>
+
+        <strong id="heroCompleted">
+          3
+        </strong>
+      </div>
+
+
+      <div>
+        <small>
+          Progress
+        </small>
+
+        <strong id="heroPercentage">
+          50%
+        </strong>
+      </div>
+
+    </div>
+
+
+    <div class="progress-bar">
+
+      <span id="heroProgress"></span>
+
+    </div>
+
+
+    <div class="preview-task">
+
+      <div class="completed-icon">
+        ✓
+      </div>
+
+      <div>
+        <strong>
+          Build REST API
+        </strong>
+
+        <small>
+          Completed
+        </small>
+      </div>
+
+      <em>
+        Done
+      </em>
+
+    </div>
+
+
+    <div class="preview-task">
+
+      <div class="empty-icon">
+        ○
+      </div>
+
+      <div>
+        <strong>
+          Connect MongoDB
+        </strong>
+
+        <small>
+          In progress
+        </small>
+      </div>
+
+      <em class="active">
+        Active
+      </em>
+
+    </div>
+
+
+    <div class="preview-task">
+
+      <div class="empty-icon">
+        ○
+      </div>
+
+      <div>
+        <strong>
+          Deploy on Render
+        </strong>
+
+        <small>
+          Pending
+        </small>
+      </div>
+
+      <em class="pending">
+        Next
+      </em>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section
+  class="section"
+  id="features"
+>
+
+  <div class="section-heading">
+
+    <div>
+
+      <span class="eyebrow">
+        WHY TASKFLOW
+      </span>
+
+      <h2>
+        Everything you need
+        to manage tasks.
+      </h2>
+
+    </div>
+
+
+    <p>
+      A polished frontend for the
+      Task API assignment, designed
+      for a professional project showcase.
+    </p>
+
+  </div>
+
+
+  <div class="feature-grid">
+
+
+    <article class="feature-card">
+
+      <div class="feature-icon">
+        ⚡
+      </div>
+
+      <h3>
+        Fast REST API
+      </h3>
+
+      <p>
+        Clean CRUD endpoints with
+        proper HTTP status codes
+        and structured JSON responses.
+      </p>
+
+    </article>
+
+
+    <article class="feature-card">
+
+      <div class="feature-icon">
+        🔐
+      </div>
+
+      <h3>
+        JWT Security
+      </h3>
+
+      <p>
+        Protected routes keep every
+        user's tasks private and secure.
+      </p>
+
+    </article>
+
+
+    <article class="feature-card">
+
+      <div class="feature-icon">
+        ☁
+      </div>
+
+      <h3>
+        Cloud Ready
+      </h3>
+
+      <p>
+        Backend is ready for Render
+        or Railway and frontend for
+        GitHub Pages.
+      </p>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<section
+  class="section"
+  id="dashboard"
+>
+
+  <div class="section-heading">
+
+    <div>
+
+      <span class="eyebrow">
+        TASK DASHBOARD
+      </span>
+
+      <h2>
+        Your workspace.
+      </h2>
+
+    </div>
+
+
+    <button
+      class="primary-button"
+      id="newTaskButton"
+    >
+      + New Task
+    </button>
+
+  </div>
+
+
+
+  <div class="dashboard-container">
+
+
+    <aside class="sidebar">
+
+      <div class="profile">
+
+        <div class="avatar">
+          S
+        </div>
+
+        <div>
+
+          <strong>
+            Demo Student
+          </strong>
+
+          <small>
+            Task Manager
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <button class="sidebar-link active">
+        ▦ All Tasks
+        <span id="allCount">6</span>
+      </button>
+
+
+      <button class="sidebar-link">
+        ◷ In Progress
+        <span id="progressCount">2</span>
+      </button>
+
+
+      <button class="sidebar-link">
+        ✓ Completed
+        <span id="completedCount">3</span>
+      </button>
+
+
+      <button class="sidebar-link">
+        ○ Pending
+        <span id="pendingCount">1</span>
+      </button>
+
+
+      <div class="api-status">
+
+        <span></span>
+
+        <div>
+
+          <strong>
+            API Status
+          </strong>
+
+          <small>
+            Demo Mode
+          </small>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+
+
+    <section class="task-area">
+
+      <div class="task-toolbar">
+
+        <div>
+
+          <strong>
+            My Tasks
+          </strong>
+
+          <small id="taskSummary">
+            6 tasks
+          </small>
+
+        </div>
+
+
+        <div class="search">
+
+          🔍
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search tasks..."
+          >
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="task-list"
+        id="taskList"
+      ></div>
+
+    </section>
+
+  </div>
+
+</section>
+
+
+
+<section
+  class="section"
+  id="api"
+>
+
+  <div class="api-box">
+
+    <div>
+
+      <span class="eyebrow">
+        DEVELOPER READY
+      </span>
+
+      <h2>
+        Explore the API.
+      </h2>
+
+      <p>
+        Authentication, CRUD operations,
+        validation and Swagger documentation
+        are included in the backend.
+      </p>
+
+    </div>
+
+
+    <div class="endpoint-list">
+
+      <div>
+        <span class="post">
+          POST
+        </span>
+
+        <code>
+          /api/auth/register
+        </code>
+
+        <small>
+          Register
+        </small>
+      </div>
+
+
+      <div>
+        <span class="post">
+          POST
+        </span>
+
+        <code>
+          /api/auth/login
+        </code>
+
+        <small>
+          Login
+        </small>
+      </div>
+
+
+      <div>
+        <span class="get">
+          GET
+        </span>
+
+        <code>
+          /api/tasks
+        </code>
+
+        <small>
+          Get Tasks
+        </small>
+      </div>
+
+
+      <div>
+        <span class="post">
+          POST
+        </span>
+
+        <code>
+          /api/tasks
+        </code>
+
+        <small>
+          Create
+        </small>
+      </div>
+
+
+      <div>
+        <span class="put">
+          PUT
+        </span>
+
+        <code>
+          /api/tasks/:id
+        </code>
+
+        <small>
+          Update
+        </small>
+      </div>
+
+
+      <div>
+        <span class="delete">
+          DELETE
+        </span>
+
+        <code>
+          /api/tasks/:id
+        </code>
+
+        <small>
+          Delete
+        </small>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+  <div class="footer-logo">
+    ✓ TaskFlow
+  </div>
+
+  <p>
+    RESTful Task Management System
+    · Node.js · Express · MongoDB
+  </p>
+
+  <span>
+    © 2026
+  </span>
+
+</footer>
+
+
+
+<div
+  class="modal hidden"
+  id="taskModal"
+>
+
+  <div class="modal-card">
+
+    <button
+      class="close-button"
+      id="closeModal"
+    >
+      ×
+    </button>
+
+
+    <span class="eyebrow">
+      NEW TASK
+    </span>
+
+
+    <h2>
+      Create a task
+    </h2>
+
+
+    <form id="taskForm">
+
+
+      <label>
+
+        Title
+
+        <input
+          type="text"
+          id="taskTitle"
+          required
+          minlength="2"
+          placeholder="Complete API documentation"
+        >
+
+      </label>
+
+
+      <label>
+
+        Description
+
+        <textarea
+          id="taskDescription"
+          placeholder="Add a short description..."
+        ></textarea>
+
+      </label>
+
+
+      <label>
+
+        Status
+
+        <select id="taskStatus">
+
+          <option value="pending">
+            Pending
+          </option>
+
+          <option value="in-progress">
+            In Progress
+          </option>
+
+          <option value="completed">
+            Completed
+          </option>
+
+        </select>
+
+      </label>
+
+
+      <button
+        type="submit"
+        class="primary-button full"
+      >
+        Create Task
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
